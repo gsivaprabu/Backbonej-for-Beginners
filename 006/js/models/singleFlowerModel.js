@@ -3,11 +3,11 @@ var app = app || {};
 
 app.Flower = Backbone.Model.extend({
 
-  initialize: function() {
+    initialize: function() {
 
-    this.on('change', function(){
-      console.log('The ' + this.get("name") + " model instance just changed!");
-    });
-    
-  }
+        this.on('change', function() {
+            console.log('The ' + this.get("name") + " model instance just changed!");
+        });
+
+    }
 });
