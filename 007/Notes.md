@@ -15,5 +15,3 @@
 - The views communicate with each other.
 - Model instance data gets stored in an article tag.
 - Collection data gets stored in a section tag.
-
-
