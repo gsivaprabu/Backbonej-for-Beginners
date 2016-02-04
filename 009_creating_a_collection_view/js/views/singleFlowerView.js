@@ -1,10 +1,8 @@
 // Namespace our flowerApp
 var app = app || {};
 
-//Namespace variable
 app.singleFlowerView = Backbone.View.extend({
 
-	//which tag the single model binded
   tagName: "article",
   className: "flowerListItem",
 
