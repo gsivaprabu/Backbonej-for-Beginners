@@ -1,32 +1,34 @@
-var redRoses = new app.singleFlower({
-  name: "Red Roses",
-  price: 39.95,
-  color: "Red",
-  img: "images/redRoses.jpg",
-  link: "redRose"
+var redRoses = new app.singleFlowerModel({
+    name: "Red Roses",
+    price: 39.95,
+    color: "Red",
+    img: "images/redRoses.jpg"
 });
 
-var rainbowRoses = new app.singleFlower({
-  name: "Rainbow Roses",
-  price: 29.95,
-  color: "orange",
-  link: "rainbowRose"
+//console.log(redRoses);
+
+var rainbowRoses = new app.singleFlowerModel({
+    name: "Rainbow Roses",
+    price: 29.95,
+    color: "orange",
+    link: "rainbowRose"
 });
 
-var heirloomRoses = new app.singleFlower({
-  name: "Heirloom roses",
-  price: 19.95,
-  img: "images/heirloomPinkRoses.jpg",
-  link: "heirloomRose"
+var heirloomRoses = new app.singleFlowerModel({
+    name: "Heirloom roses",
+    price: 19.95,
+    img: "images/heirloomPinkRoses.jpg",
+    link: "heirloomRose"
 });
 
 var flowerGroup = new app.FlowersCollection([
-  redRoses, rainbowRoses, heirloomRoses
+    redRoses, rainbowRoses, heirloomRoses
 ]);
 
-var flowerGroupView = new app.allFlowersView({ collection: flowerGroup});
+var flowerGroupView = new app.allFlowersView({
+    collection: flowerGroup
+});
 
-console.log(JSON.stringify(flowerGroupView))
+// console.log(JSON.stringify(flowerGroupView))
 
 $("#allFlowers").html(flowerGroupView.render().el);
-
