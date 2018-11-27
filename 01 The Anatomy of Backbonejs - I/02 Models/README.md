@@ -122,3 +122,5 @@ var doThing = function(){
     alert('doThing called');
 }
 ```
+# Special Events
+![Special Events](https://raw.githubusercontent.com/gsivaprabu/Backbonejs-for-Beginners/master/01%20The%20Anatomy%20of%20Backbonejs%20-%20I/02%20Models/Special%20Events.png)
