@@ -140,4 +140,4 @@ this.$el.delegate('h3','click',alertStatus);
 ### List of events support in backbonejs
 
 
-![Special Events](https://raw.githubusercontent.com/gsivaprabu/Backbonejs-for-Beginners/master/01%20The%20Anatomy%20of%20Backbonejs%20-%20I/02%20Models/Special%20Events.png)
+![Special Events](https://raw.githubusercontent.com/gsivaprabu/Backbonejs-for-Beginners/master/01%20The%20Anatomy%20of%20Backbonejs%20-%20I/03%20Views/events.png)
