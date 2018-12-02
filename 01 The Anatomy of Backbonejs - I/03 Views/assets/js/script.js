@@ -2,20 +2,57 @@
 
 $(function () {
 
-	
-	 var TodoView = Backbone.View.extend({
-		tagName:'article',
-		id:'todo-view',
-		className: 'todo'
+	var TodoItem = Backbone.Model.extend({
+		defaults: {
+			description: 'Empty todo...',
+			status: 'incomplete'
+		}
 	});
-	var todoView = new TodoView();
+	var todoItem = new TodoItem();
+
+
+	var TodoView = Backbone.View.extend({
+		tagName: 'article',
+		id: 'todo-view',
+		className: 'todo',
+		render: function () {
+			var html = '<h3>' + this.model.get('description') + '</h3>';
+			this.$el.html(html);
+		}
+	});
+
+	var todoView = new TodoView({ model: todoItem });
 	todoView.render();
-	// console.log(todoView.el);
-
-
+	console.log(todoView.el);
 
 
 	
+	var TodoItem1 = Backbone.Model.extend({
+		defaults: {
+			description: 'Empty todo...',
+			status: 'incomplete'
+		}
+	});
+	var todoItem1 = new TodoItem1();
+
+
+	var TodoView1 = Backbone.View.extend({
+		tagName: 'article',
+		id: 'todo-view',
+		className: 'todo',
+		template: _.template('<h3><%= status %></h3>'),
+		render: function () {
+			var attributes = this.model.toJSON();
+			this.$el.html(this.template(attributes));
+		}
+	});
+
+	var todoView1 = new TodoView1({ model: todoItem1 });
+	todoView1.render();
+	console.log(todoView1.el);
+
+
+
 	// Create a model for the services
 	var Service = Backbone.Model.extend({
 
@@ -90,7 +127,7 @@ $(function () {
 	});
 
 
-	
+
 	// The main view of the application
 	var App = Backbone.View.extend({
 
